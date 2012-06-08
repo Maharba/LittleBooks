@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<nHibernateModelDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Libros">
+  <modelMoniker name="/" />
+  <nestedChildShapes>
+    <entityShape Id="4c098e57-b841-46f5-a915-0c2f8344c98f" absoluteBounds="2.25, 2.125, 1.5, 1.5910001627604165">
+      <entityMoniker name="//Libro" />
+      <nestedChildShapes>
+        <elementListCompartment Id="199942bb-bf10-416e-9d03-6b7256b0132e" absoluteBounds="2.265, 2.435, 1.4700000000000002, 0.40705362955729157" name="Identity" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="a930c947-6ad1-44cc-a079-fbf99fb743eb" absoluteBounds="2.265, 2.8520536295572914, 1.4700000000000002, 0.763946533203125" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
+    <entityShape Id="2e432fb8-7696-4e13-a86e-ecf47a0c5783" absoluteBounds="5.875, 1.25, 1.5, 1.2341072591145834">
+      <entityMoniker name="//Resenha" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e784a951-5ea5-41bf-8f39-d9929d9c2939" absoluteBounds="5.89, 1.56, 1.4700000000000002, 0.40705362955729157" name="Identity" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="30cce750-5cab-4f99-8526-9f50da6922b7" absoluteBounds="5.89, 1.9770536295572914, 1.4700000000000002, 0.40705362955729174" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
+    <oneToManyAssociationConnector Id="7d82ea9c-7f86-4f83-b1ca-cad14b4740b0" edgePoints="[(3.75 : 2.30455362955729); (5.875 : 2.30455362955729)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <oneToManyAssociationMoniker Id="1f56c684-665a-49e6-bb91-26a8bda2e636" />
+      <relativeChildShapes />
+      <nodes>
+        <entityShapeMoniker Id="4c098e57-b841-46f5-a915-0c2f8344c98f" />
+        <entityShapeMoniker Id="2e432fb8-7696-4e13-a86e-ecf47a0c5783" />
+      </nodes>
+    </oneToManyAssociationConnector>
+    <entityShape Id="5dec361d-86e8-4c72-8380-3977666d30f9" absoluteBounds="5.125, 5.375, 1.5, 1.7694466145833334">
+      <entityMoniker name="//Autor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d0fcd1bd-047c-42e4-b78c-4a61db609e44" absoluteBounds="5.14, 5.6850000000000005, 1.4700000000000002, 0.40705362955729157" name="Identity" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="e3fc1718-2427-4573-a289-33ba13fdd97d" absoluteBounds="5.14, 6.1020536295572914, 1.4700000000000002, 0.94239298502604174" name="Properties" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </entityShape>
+    <oneToManyAssociationConnector Id="b5c00df3-56a3-4b6d-a1ed-1ac95d5e68d1" edgePoints="[(5.34375 : 5.375); (5.34375 : 3.3813037109375); (3.75 : 3.3813037109375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <oneToManyAssociationMoniker Id="c65278a9-9480-46d2-a6f4-bbd2f6afb7c5" />
+      <relativeChildShapes />
+      <nodes>
+        <entityShapeMoniker Id="5dec361d-86e8-4c72-8380-3977666d30f9" />
+        <entityShapeMoniker Id="4c098e57-b841-46f5-a915-0c2f8344c98f" />
+      </nodes>
+    </oneToManyAssociationConnector>
+  </nestedChildShapes>
+</nHibernateModelDiagram>

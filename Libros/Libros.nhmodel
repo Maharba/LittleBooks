@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<model xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" databaseProvider="MySql5" connectionString="server=localhost;User Id=root;database=libros;password=root;Persist Security Info=True" name="" defaultIdentityGenerator="HiLo" xmlns="http://namespaces.mindscape.co.nz/nhmodel">
+  <entities>
+    <entity name="Libro" tableName="libros">
+      <entityProperties>
+        <entityProperty name="Titulo" size="255" columnName="Titulo" isNullable="true">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="255" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="AutorId" columnName="Autor" isNullable="true" dataType="Int32" />
+        <entityProperty name="TituloOriginal" size="255" columnName="TituloOriginal" isNullable="true">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="255" />
+          </validations>
+        </entityProperty>
+      </entityProperties>
+      <identityProperties>
+        <identityProperty name="Id" columnName="Id" />
+      </identityProperties>
+      <oneToManyAssociations>
+        <oneToManyAssociation Id="1f56c684-665a-49e6-bb91-26a8bda2e636" collectionName="Resenhas" keyColumnName="IdLibroId" backreferenceName="Libro">
+          <entityMoniker name="//Resenha" />
+        </oneToManyAssociation>
+      </oneToManyAssociations>
+    </entity>
+    <entity name="Resenha" tableName="resenhas">
+      <entityProperties>
+        <entityProperty name="Descripcion" columnName="Resenha" isNullable="true" />
+      </entityProperties>
+      <identityProperties>
+        <identityProperty name="IdLibro" columnName="IdLibro" />
+      </identityProperties>
+    </entity>
+    <entity name="Autor" tableName="autores">
+      <entityProperties>
+        <entityProperty name="Nombre" size="255" columnName="Nombre" isNullable="true">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="255" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Nacimiento" columnName="Nacimiento" isNullable="true" />
+        <entityProperty name="Muerte" size="255" columnName="Muerte" isNullable="true">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="255" />
+          </validations>
+        </entityProperty>
+        <entityProperty name="Nacionalidad" size="255" columnName="Nacionalidad" isNullable="true">
+          <validations>
+            <lengthValidation minimumLength="0" maximumLength="255" />
+          </validations>
+        </entityProperty>
+      </entityProperties>
+      <identityProperties>
+        <identityProperty name="IdAutor" columnName="IdAutor" />
+      </identityProperties>
+      <oneToManyAssociations>
+        <oneToManyAssociation Id="c65278a9-9480-46d2-a6f4-bbd2f6afb7c5" collectionName="Libros" keyColumnName="AutorId" backreferenceName="Autor">
+          <entityMoniker name="//Libro" />
+        </oneToManyAssociation>
+      </oneToManyAssociations>
+    </entity>
+  </entities>
+  <policies>
+    <codeGenerationPolicy Id="d88a81d0-292c-400b-a3e6-66e598f1c4e7" layout="FilePerType" />
+  </policies>
+</model>
